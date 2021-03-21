@@ -2,6 +2,7 @@ import {Request, Response} from "express";
 import {getCustomRepository} from "typeorm";
 import {UserRepository} from "../repositories/UserRepository";
 import * as yup from 'yup';
+import {AppError} from "../errors/AppError";
 
 class UserController {
  async create(request: Request, response: Response) {
@@ -24,9 +25,7 @@ class UserController {
         email
     });
     if (userAlreadExists) {
-        return response.status(400).json({
-           error: "Usuario já cadastrado na base de dados!"
-        });
+        throw new AppError("Usuario já cadastrado na base de dados!");
     }
 
     const user = userRepository.create({
