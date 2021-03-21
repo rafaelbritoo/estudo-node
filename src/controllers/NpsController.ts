@@ -36,6 +36,7 @@ class NpsController {
 
         const calculate = (((promoter - detractor) / totalAnsewrs) * 100).toFixed(2);
 
+        // @ts-ignore
         return response.json({
             detractor,
             promoter,

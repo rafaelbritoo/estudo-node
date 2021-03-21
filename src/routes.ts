@@ -22,6 +22,7 @@ router.post("/sendMail", sendMailController.execute);
 
 router.get("/answers/:valor", answerController.execute);
 
+// @ts-ignore
 router.get("/nps/:survey_id", npsController.execute)
 
 export {router};
