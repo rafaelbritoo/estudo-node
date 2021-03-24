@@ -10,9 +10,10 @@ Objetivos
 
 **Pré requisitos**
 * NodeJS & NPM - https://nodejs.org/en/
-* Typescript
+* YARN   - https://classic.yarnpkg.com/en/docs/install/#debian-stable
+* ts-node-dev
 
-        npm install typescript -g
+        yarn add ts-node-dev
 
 **Para executar o Projeto**
 
